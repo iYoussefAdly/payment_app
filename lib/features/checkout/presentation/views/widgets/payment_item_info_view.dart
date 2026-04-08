@@ -2,9 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/payment_item_info.dart';
 
 class PaymentItemInfoView extends StatelessWidget {
-  const PaymentItemInfoView({
-    super.key,
-  });
+  const PaymentItemInfoView({super.key});
 
   @override
   Widget build(BuildContext context) {

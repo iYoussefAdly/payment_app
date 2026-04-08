@@ -13,7 +13,7 @@ abstract class AppRouter {
         path: kPaymentDetailsView,
         builder: (context, state) => PaymentDetailsView(),
       ),
-      GoRoute(path: kThankYouView,builder: (context, state) => ThankYouView(),)
+      GoRoute(path: kThankYouView, builder: (context, state) => ThankYouView()),
     ],
   );
 }

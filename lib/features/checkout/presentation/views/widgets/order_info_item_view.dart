@@ -7,13 +7,13 @@ class OrderInfoItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:[
+      children: [
         OrderInfoItem(title: "Order Subtotal", price: "42.97"),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 3),
           child: OrderInfoItem(title: "Discount", price: "0"),
         ),
-        OrderInfoItem(title: "Shipping", price: "8")
+        OrderInfoItem(title: "Shipping", price: "8"),
       ],
     );
   }

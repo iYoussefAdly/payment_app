@@ -8,8 +8,8 @@ class PaymentDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:buildConstAppBar(title: "Payment Details"),
-      body:PaymentDetailsBody(),
+      appBar: buildConstAppBar(title: "Payment Details"),
+      body: PaymentDetailsBody(),
     );
   }
 }

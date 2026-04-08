@@ -9,9 +9,9 @@ class OrderInfoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title,style: Styles.style18Regular,),
+        Text(title, style: Styles.style18Regular),
         Spacer(),
-        Text(r"$" + price,style: Styles.style18Regular,),
+        Text(r"$" + price, style: Styles.style18Regular),
       ],
     );
   }
