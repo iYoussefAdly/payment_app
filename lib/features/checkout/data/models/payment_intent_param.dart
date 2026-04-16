@@ -1,11 +1,17 @@
 class PaymentIntentParam {
   final String amount;
   final String currency;
-  PaymentIntentParam({required this.amount, required this.currency});
-  toJson(){
+  final String customerId;
+  PaymentIntentParam({
+    required this.amount,
+    required this.currency,
+    required this.customerId,
+  });
+  toJson() {
     return {
-      "amount":amount,
-      "currency":currency
+      "amount": '${amount}00',
+      "currency": currency,
+      "customer": customerId,
     };
   }
 }

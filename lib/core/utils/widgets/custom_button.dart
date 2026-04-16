@@ -22,7 +22,11 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: Color(0xff32A150),
         ),
-        child: Center(child: isLoading?CircularProgressIndicator():Text(text, style: Styles.style22Medium)),
+        child: Center(
+          child: isLoading
+              ? CircularProgressIndicator()
+              : Text(text, style: Styles.style22Medium),
+        ),
       ),
     );
   }

@@ -18,6 +18,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
           GoRouter.of(context).pushReplacement(AppRouter.kThankYouView);
         }
         if (state is PaymentFailure) {
+          GoRouter.of(context).pop();
           showSnackBar(context, state.errorMessage);
         }
       },
@@ -26,8 +27,9 @@ class CustomButtonBlocConsumer extends StatelessWidget {
           isLoading: state is PaymentLoading ? true : false,
           onTap: () {
             PaymentIntentParam paymentIntentParam = PaymentIntentParam(
-              amount: "250",
+              amount: "350",
               currency: "USD",
+              customerId: 'cus_ULZLkcDFgq29MH',
             );
             BlocProvider.of<PaymentCubit>(
               context,
