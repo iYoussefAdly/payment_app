@@ -82,7 +82,7 @@ class StripeService {
       paymentIntentParam: paymentIntentParam,
     );
     var ephemeralKey = await createEphemeralKey(
-      customerId:paymentIntentParam.customerId
+      customerId: paymentIntentParam.customerId,
     );
     var paymentSheetparams = InitPaymentSheetParam(
       clientSecret: paymentIntentModel.clientSecret!,
