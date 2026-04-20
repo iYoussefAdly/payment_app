@@ -3,12 +3,13 @@ import 'package:payment_app/core/utils/assets_data.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/payment_item.dart';
 
 class PaymentItemView extends StatefulWidget {
-  const PaymentItemView({super.key});
+  const PaymentItemView({super.key, required this.updatePaymentMethod});
   static final List<String> images = [
     AssetsData.cardImage,
     AssetsData.paypalImage,
     AssetsData.payImage,
   ];
+  final Function({required int index}) updatePaymentMethod;
 
   @override
   State<PaymentItemView> createState() => _PaymentItemViewState();
@@ -32,6 +33,7 @@ class _PaymentItemViewState extends State<PaymentItemView> {
                 onTap: () {
                   setState(() {
                     currentIndex = index;
+                    widget.updatePaymentMethod(index: currentIndex);
                   });
                 },
               ),

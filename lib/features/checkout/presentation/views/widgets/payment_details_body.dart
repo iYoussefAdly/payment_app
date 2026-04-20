@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:payment_app/core/utils/app_router.dart';
 import 'package:payment_app/core/utils/widgets/custom_button.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/custom_credit_card.dart';
-import 'package:payment_app/features/checkout/presentation/views/widgets/payment_item_view.dart';
 
 class PaymentDetailsBody extends StatefulWidget {
   const PaymentDetailsBody({super.key});
@@ -19,12 +18,12 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(children: [SizedBox(height: 30), PaymentItemView()]),
-          ),
-        ),
+        // SliverToBoxAdapter(
+        //   child: Padding(
+        //     padding: const EdgeInsets.symmetric(horizontal: 20),
+        //     child: Column(children: [SizedBox(height: 30), PaymentItemView()]),
+        //   ),
+        // ),
         SliverToBoxAdapter(
           child: CustomCreditCard(
             formKey: formKey,

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:payment_app/core/utils/api_service.dart';
 import 'package:payment_app/core/utils/errors/failure.dart';
 import 'package:payment_app/core/utils/stripe_service.dart';
@@ -15,8 +15,12 @@ class CheckoutRepoImpl extends CheckoutRepo {
     try {
       await stripeService.makePayment(paymentIntentParam: paymentIntentParam);
       return right(null);
-    } on DioException catch (e) {
-      return left(ServerFailure.formDioException(e));
+    } on StripeException catch (e) {
+      return left(
+        ServerFailure(
+          errorMessage: e.error.message ?? "Oops there was an error",
+        ),
+      );
     }
   }
 }
